@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ImageListComponent implements OnInit {
 
-  searchQuery: string;
+  searchQuery: string = null;
   images: any [];
   imagesFound: boolean = false;
   searching: boolean = false;
@@ -26,6 +26,7 @@ export class ImageListComponent implements OnInit {
   }
 
   searchImage(query: string) {
+    this.searchQuery = ''; // clear field input
     this.searching = true; // delay to load image
     return this.imageService.getImage(query).subscribe(
       data => this.handleSuccess(data),
@@ -33,5 +34,4 @@ export class ImageListComponent implements OnInit {
       () => this.searching = false
     )
   }
-
 }

@@ -14,12 +14,13 @@
 -->
 <md-card>
   <md-input-container>
-    <input class="search" mdInput [(ngModel)]="searchQuery" name="search" placeholder="Search for Images">
+    <input class="search" mdInput [(ngModel)]="searchQuery" (keyup.enter)="searchImage(searchQuery)" name="search" placeholder="Search for Images">
   </md-input-container>
   <br>
   
   <button (click)="searchImage(searchQuery)" 
-    md-raised-button class="searchButton" type="button">Find Image</button>
+    md-raised-button class="searchButton" type="button">Find Image
+  </button>
 
 </md-card>
 

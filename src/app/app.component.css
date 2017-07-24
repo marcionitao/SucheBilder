@@ -1,6 +1,6 @@
 
 .main-content{
-  padding-top: 50px;
+  padding-top: 25px;
   background-color: transparent!important;
 }
 
@@ -12,7 +12,7 @@ h1{
   color: #333;
   font-family: "Fredoka One", cursive;
   text-align: center;
-  font-size: 4.2em;
+  font-size: 4em;
   padding-bottom: 0.5em;
 }
 
@@ -22,9 +22,9 @@ h1{
 
 #title{
   display: inline-block;
-  font-size: 3.6em;
+  font-size: 3em;
   font-family: 'Pacifico', cursive;
-  text-align: center;
+  text-align: right;
   padding-bottom: 0.5em;
 }
 
