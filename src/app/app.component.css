@@ -29,7 +29,16 @@ h1{
 }
 
 .pixabayLogo{
-  width: 200px;
+  width: 150px;
+}
+
+@media(max-width: 32em) {
+  .pixabayLogo{
+    width: 50px;
+  }
+  #attribution {
+    font-size: 0px;
+  }
 }
 
 .logo{
