@@ -7,7 +7,7 @@ before_script: # commands to run before the build step
    - npm install -g --silent @angular/cli
 
 script: # the build step
-   - ng build --env=prod
+   - ng build --prod
 
 branches:
   only:
