@@ -1,4 +1,5 @@
 # SucheBilder
+[![Build Status](https://travis-ci.org/marcionitao/SucheBilder.svg?branch=master)](https://travis-ci.org/marcionitao/SucheBilder)
 
 https://marcionitao.github.io/SucheBilder/
 
