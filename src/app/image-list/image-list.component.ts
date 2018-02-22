@@ -12,6 +12,7 @@ export class ImageListComponent implements OnInit {
   images: any [];
   imagesFound: boolean = false;
   searching: boolean = false;
+  notFound: any;
 
   constructor( private imageService: ImageService ) { }
 
@@ -22,7 +23,8 @@ export class ImageListComponent implements OnInit {
   handleSuccess(data){
     this.imagesFound = true;
     this.images = data.hits;
-    console.log(data.hits);
+    this.notFound = data.hits.length;
+    console.log(this.notFound);
   }
 
   searchImage(query: string) {

@@ -12,7 +12,7 @@
   <p>Likes: {{ image.likes }} </p>
 </div>
 -->
-<md-card>
+<md-card style="padding-bottom: 10px;">
   <md-input-container>
     <input class="search" mdInput [(ngModel)]="searchQuery" (keyup.enter)="searchImage(searchQuery)" name="search" placeholder="Search for Images">
   </md-input-container>
@@ -29,7 +29,8 @@
 </div>
 
 <md-card>
-  <h4 *ngIf="imagesFound" md-subeader>Results</h4>
+  <!--<h4 *ngIf="imagesFound" md-subeader>Results</h4>-->
+  <img *ngIf="notFound === 0" src="./assets/image/noImageFound.jpg" id="centeredImage">
   <masonry [useImagesLoaded]="true">
     <masonry-brick *ngFor="let image of images" class=image-container>
       <md-card>

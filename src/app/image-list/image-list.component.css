@@ -32,3 +32,15 @@
     padding: 8px;
     margin-bottom: 12px;
 }
+
+#centeredImage {
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+    min-height: 100px;
+    max-width: 300px;
+   /* margin: 8px;*/
+    border-radius: 2px;
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
+    overflow: hidden;
+  }
