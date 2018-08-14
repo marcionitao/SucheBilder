@@ -12,45 +12,47 @@
   <p>Likes: {{ image.likes }} </p>
 </div>
 -->
-<md-card style="padding-bottom: 10px;">
-  <md-input-container>
-    <input class="search" mdInput [(ngModel)]="searchQuery" (keyup.enter)="searchImage(searchQuery)" name="search" placeholder="Search for Images">
-  </md-input-container>
+<mat-card style="padding-bottom: 10px;">
+  <mat-form-field class="search">
+    <input  matInput [(ngModel)]="searchQuery" (keyup.enter)="searchImage(searchQuery)" name="search" placeholder="Search for Images">
+  </mat-form-field>
   <br>
   
   <button (click)="searchImage(searchQuery)" 
-    md-raised-button class="searchButton" type="button">Find Image
+    mat-raised-button class="searchButton" type="button">Find Image
   </button>
 
-</md-card>
+  <div *ngIf="searching" >
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+  </div>
 
-<div *ngIf="searching" >
-  <md-progress-bar mode="indeterminate"></md-progress-bar>
-</div>
+</mat-card>
 
-<md-card>
+
+
+<mat-card>
   <!--<h4 *ngIf="imagesFound" md-subeader>Results</h4>-->
   <img *ngIf="notFound === 0" src="./assets/image/noImageFound.jpg" id="centeredImage">
   <masonry [useImagesLoaded]="true">
     <masonry-brick *ngFor="let image of images" class=image-container>
-      <md-card>
+      <mat-card>
         <a href="{{ image.pageURL }}" target="_bank">
-          <md-card-header>
-            <div class="avatar" md-card-avatar [ngStyle]="{'background-image':'url('+ image.userImageURL +')', 'background-size':'40px 40px'}"></div>
-            <md-card-title>User: {{ image.user }}</md-card-title>
-          </md-card-header>
+          <mat-card-header>
+            <div class="avatar" mat-card-avatar [ngStyle]="{'background-image':'url('+ image.userImageURL +')', 'background-size':'40px 40px'}"></div>
+            <mat-card-title>User: {{ image.user }}</mat-card-title>
+          </mat-card-header>
           <img md-card-image src="{{image.webformatURL}}">
-          <md-card-content>
+          <mat-card-content>
             <p>Tags: {{ image.tags }}</p>
             <p>Comments: {{ image.comments }}</p>
             <p>Likes: {{ image.likes }}</p>
-          </md-card-content>
+          </mat-card-content>
         </a>
-      </md-card>
+      </mat-card>
       <br><br>
     </masonry-brick>
   </masonry>
-</md-card>
+</mat-card>
 
 <div style="text-align: right">
   <a href="http://github.com/marcionitao/sucheBilder"><img src="./assets/image/git.png" style="width:50px; margin-top:20px"></a>

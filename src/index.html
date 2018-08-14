@@ -8,6 +8,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+   <!--Error Angular 6 Uncaught ReferenceError: global is not defined -->
+   <script>
+    if (global === undefined) {
+      var global = window;
+    }
+  </script>
+  
 </head>
 <body>
   <app-root>Loading...</app-root>

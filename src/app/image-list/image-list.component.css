@@ -5,8 +5,14 @@
 .search{
     height: 60px;
     max-height: 60px;
-    font-size: 3em;
+    font-size: 2em;
+    display: flex;
+    flex-direction: column;
 }
+
+.search > * {
+    width: 100%;
+  }
 
 .avatar{
     margin-bottom: 7px;

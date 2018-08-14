@@ -15,10 +15,15 @@
     "lib": [
       "es2016",
       "dom"
-    ]
+    ],
+    "module": "es2015",
   },
-  "include":[
+  "include": [
     "node_modules/angular2-masonry",
     "src/**/*"
+  ],
+  "files": [
+    "src/app/app.module.ts"
   ]
+ 
 }

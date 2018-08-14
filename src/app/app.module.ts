@@ -1,15 +1,13 @@
 import { ImageService } from './shared/image.service';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
-import { MaterialModule } from '@angular/material';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MdButtonModule, MdCardModule, MdMenuModule, MdToolbarModule, MdIconModule } from '@angular/material';
+import { MatProgressBarModule, MatToolbarModule, MatMenuModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatCardModule, MatInputModule  } from '@angular/material';
 
 import { MasonryModule } from 'angular2-masonry';
-// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppComponent } from './app.component';
 import { ImageListComponent } from './image-list/image-list.component';
@@ -23,15 +21,19 @@ import { ImageListComponent } from './image-list/image-list.component';
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    MaterialModule,
     MasonryModule,
     BrowserAnimationsModule,
-    MdButtonModule,
-    MdMenuModule,
-    MdCardModule,
-    MdToolbarModule,
-    MdIconModule
+    MatButtonModule,
+    MatInputModule,
+    MatProgressBarModule,
+    MatSidenavModule,
+    MatListModule,
+    MatMenuModule,
+    MatCardModule,
+    MatToolbarModule,
+    MatIconModule
   ],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ],
   providers: [ImageService],
   bootstrap: [AppComponent]
 })
